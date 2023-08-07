@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>io.github.agustin_mediotti.metronome</id>
+  
+    <branding>
+        <color type="primary">#f22943</color>
+    </branding>
+  
+    <name>Metronome</name>
+    <summary>Minimalist metronome</summary>
+  
+    <metadata_license>CC-BY-SA-4.0</metadata_license>
+    <project_license>LGPL-3.0-or-later</project_license>
+  
+    <description>
+        <p>This is a minimalist, easy to use <em>metronome</em> designed for music study and practice.</p>
+    </description>
+  
+    <screenshots>
+        <screenshot type="default">
+            <caption>Set the time</caption>
+            <image>https://raw.githubusercontent.com/myteam/myapp/1.0.0/data/screenshot.png</image>
+        </screenshot>
+    </screenshots>
+    
+    <custom>
+      <value key="x-appcenter-suggested-price">2</value>
+      <value key="x-appcenter-stripe">pk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</value>
+      
+      
+    <releases>
+      <release version="1.0.0" date="2023-07-08">
+        <description>
+          <p>Initial release, includes features such as:</p>
+          <ul>
+            <li>Application can be launched</li>
+          </ul>
+        </description>
+      </release>
+    </releases>
+  
+    <launchable type="desktop-id">io.github.agustin_mediotti.metronome.desktop</launchable>
+</component>
