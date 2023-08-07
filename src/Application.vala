@@ -14,15 +14,13 @@ public class Metronome : Gtk.Application {
     }
 
     protected override void activate () {
-        var bpm_label = new Gtk.Label(bpm.to_string());
+        var bpm_label = new Gtk.Label("BPM");
         var button_start = new Gtk.Button.from_icon_name ("media-playback-start");
-        var button_up = new Gtk.Button.from_icon_name ("go-up");
-        var button_down = new Gtk.Button.from_icon_name ("go-down");
+        var bpm_control = new Gtk.SpinButton.with_range (1.0, 240.0, 1.0);
         
         var control_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
-        control_box.append (button_up);
+        control_box.append (bpm_control);
         control_box.append (bpm_label);
-        control_box.append (button_down);
         
         var layout = new Gtk.Grid () {
             column_spacing = 15,
@@ -39,16 +37,6 @@ public class Metronome : Gtk.Application {
             }
         });
         
-        button_up.clicked.connect (() => {
-            bpm = bpm++;
-            bpm_label.set_label(bpm.to_string());
-        });
-        
-        button_down.clicked.connect (() => {
-            bpm = bpm--;
-            bpm_label.set_label(bpm.to_string());
-        });
-        
         layout.attach (button_start, 1,1);
         layout.attach (control_box, 0,1);
 
@@ -58,6 +46,7 @@ public class Metronome : Gtk.Application {
             resizable = false,
             title = "Metronome",
         };
+        bpm_control.set_value(60);
         main_window.child = layout;
         main_window.present ();
     }
