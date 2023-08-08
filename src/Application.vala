@@ -65,7 +65,7 @@ public class Metronome : Gtk.Application {
             } else if (bpm_control.get_value_as_int () >= 177 && bpm_control.get_value_as_int () < 241) {
                 bpm_label.set_label ("Prestissimo");
             } else {
-                bpm_label.set_label ("Illegal Operation ", bpm_control.get_value ());
+                bpm_label.set_label ("Illegal Operation "+bpm_control.get_value ().to_string ());
             }
         });
         
