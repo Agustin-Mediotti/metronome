@@ -44,7 +44,7 @@ public class Metronome : Gtk.Application {
                 bpm_label.set_label ("Grave");
             } else if (bpm_control.get_value_as_int () >= 40 && bpm_control.get_value_as_int () < 44) {
                 bpm_label.set_label ("Lento");
-            } else if (bpm_control.get_value_as_int () >= 45 && bpm_control.get_value_as_int () < 50) {
+            } else if (bpm_control.get_value_as_int () >= 44 && bpm_control.get_value_as_int () < 50) {
                 bpm_label.set_label ("Largo");
             } else if (bpm_control.get_value_as_int () >= 50 && bpm_control.get_value_as_int () < 60) {
                 bpm_label.set_label ("Adagio");
